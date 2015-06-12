@@ -2,6 +2,10 @@
 Timer used primarily for workouts, where you have a defined time for the exercise and another defined time for breaks between reps.
 
 ##How to use
+###Online
+You can find a working demo at [workout-timer.meteor.com](workout-timer.meteor.com), even though it's rather intended for use on an Android device.
+
+###Locally
 Download the repo
 
 ```
@@ -23,7 +27,7 @@ Launch the timer
 ```
 Once done, launch your browser and navigate to **localhost:3000**
 
-##How to build for Android
+###On Android
 When in the timer directory
 
 ```
