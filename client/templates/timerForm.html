@@ -1,0 +1,35 @@
+<template name="timerForm">
+	<div class="row">
+		<form class="col s12" id="timerForm">
+			<div class="row">
+				<div class="input-field col s6">
+					<input type="number" name="reps" required/>
+					<label for="reps">s/rep</label>
+				</div>
+				<div class="input-field col s6">
+					<input type="number" name="breaks" required/>
+					<label for="breaks">s/break</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6 offset-s3">
+					<input type="number" name="rounds" required/>
+					<label for="rounds">Rounds</label>
+				</div>
+			</div>
+			{{> timer}}
+			<div class="row">
+				<div class="input-field col s12 center-align">
+					<button id="startstop" class="btn waves-effect waves-light green" type="submit" name="action"><i class="mdi-image-timer"></i> <span id="startOrStop">Start</span>
+					</button>
+					{{#if started}}
+					{{#unless paused}}
+					<button id="pause" class="btn waves-effect waves-light orange" type="button"><i class="mdi-image-timer"></i> <span>Pause</span>
+					</button>
+					{{/unless}}
+					{{/if}}
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

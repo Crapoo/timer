@@ -1,0 +1,25 @@
+/* CSS declarations go here */
+.timer {
+	font-size: 7em;
+}
+
+#round {
+	font-size: 3em;
+	margin: 0;
+}
+
+button {
+	margin: 0 auto;
+}
+
+button span , button i{
+	vertical-align: middle;
+}
+
+input{
+   text-align:center;
+}
+
+label {
+   text-align:center;
+}
