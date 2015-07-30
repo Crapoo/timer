@@ -6,14 +6,14 @@ timerRep = function () {
   reps = setInterval(function(){
     Session.set('seconds', Session.get('seconds') + 1);
     ++repeat;
-    if (repeat == 60) {
+    if (repeat % 60 === 0) {
       Session.set('seconds', 0);
       Session.set('minutes', Session.get('minutes') + 1);
     }
     if (repeat == Session.get('reps')){
       repTimer = false;
       if (Session.get('actualRound') != Session.get("maxRound")) {
-        beep.play()
+        beep.play();
         clearInterval(reps);
         timerBreak();
       } else {
@@ -24,7 +24,7 @@ timerRep = function () {
       clearInterval(reps);
     }
   }, 1000);
-}
+};
 
 timerBreak = function () {
   breakTimer = true;
@@ -34,7 +34,7 @@ timerBreak = function () {
   breaks = setInterval(function(){
     Session.set('seconds', Session.get('seconds') + 1);
     ++repeat;
-    if (repeat == 60) {
+    if (repeat % 60 === 0) {
       Session.set('seconds', 0);
       Session.set('minutes', Session.get('minutes') + 1);
     }
@@ -46,4 +46,4 @@ timerBreak = function () {
       timerRep();
     }
   }, 1000);
-}
+};

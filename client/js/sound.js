@@ -1,6 +1,6 @@
 getMediaUrl = function(sound) {
 	return cordova.file.applicationDirectory.replace('file://', '') + 'www/application/' + sound.substr(1);
-}
+};
 
 loadSound = function(path) {
 	if (Meteor.isCordova) {
@@ -13,4 +13,4 @@ loadSound = function(path) {
 	} else {
 		return new Audio(path);
 	}
-}
+};
